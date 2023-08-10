@@ -13,10 +13,10 @@ const Contact = () => {
     setDisabled(true);
     emailjs
       .sendForm(
-        "service_3gk7ubg",
-        "template_g77vpmp",
+        import.meta.env.VITE_EMAILJS_SERIVCE,
+        import.meta.env.VITE_EMAILJS_TEMPLATE,
         form.current,
-        "pO2Kg3tJsGJCbD9L7"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
